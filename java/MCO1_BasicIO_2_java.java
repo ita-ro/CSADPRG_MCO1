@@ -46,6 +46,7 @@ public class MCO1_BasicIO_2_java {
         System.out.println();
         System.out.print("Deposit Amount: ");
         double depositAmount = scanner.nextDouble();
+        scanner.nextLine(); 
         System.out.println();
         System.out.print("***");
         
@@ -61,6 +62,7 @@ public class MCO1_BasicIO_2_java {
         System.out.println();
         System.out.print("Withdraw Amount: ");
         double withdrawAmount = scanner.nextDouble();
+        scanner.nextLine(); 
         System.out.println();
         System.out.print("***");
         
@@ -80,20 +82,22 @@ public class MCO1_BasicIO_2_java {
         System.out.println();
         
 
-        System.out.print("Select Foreign Currency: ");
-        String foreignCurrency = scanner.nextLine();
-        System.out.print("Exchange Rate: ");
-        String exchangeRate = scanner.nextLine();
+        System.out.printf("Select Foreign Currency: ");
+        int foreignCurrency = scanner.nextInt();
+        
+        System.out.printf("Exchange Rate: ");
+        double exchangeRate = scanner.nextDouble();
+        
         System.out.println();
         System.out.print("***");
         
-        System.out.println("\nSelect Foreign Currency = " + foreignCurrency);
-        System.out.println("Exchange Rate = " + exchangeRate + "\n");
+        System.out.printf("\nSelect Foreign Currency = [%d]\n", foreignCurrency);
+        System.out.printf("Exchange Rate = %.2f\n\n", exchangeRate);
         
         // currency
         System.out.println("Foreign Currency Exchange");
         System.out.print("Source Amount (PHP): ");
-        double sourceAmount = Double.parseDouble(scanner.nextLine());
+        double sourceAmount = scanner.nextDouble();
         System.out.println();
         
         System.out.println("Exchanged Currency");
@@ -108,6 +112,6 @@ public class MCO1_BasicIO_2_java {
 
         System.out.println("\nSource Currency = Philippine Peso (PHP)");
         System.out.printf("Source Amount (PHP) = %.2f\n", sourceAmount);
-        scanner.close();
+        
     }
 }

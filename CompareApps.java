@@ -10,7 +10,7 @@ public class CompareApps {
         System.out.print("Enter second program to compare (java, kotlin, c, r): ");
         String prog2 = scanner.nextLine().trim().toLowerCase();
 
-        String input = "1\nJohn Doe\nJohn Doe\n500\nJohn Doe\n200\n[1]\n62.00\n1000\n";
+        String input = "1\nJohn Doe\nJohn Doe\n500\nJohn Doe\n200\n1\n62.00\n1000\n";
         
         compile(prog1);
         compile(prog2);
