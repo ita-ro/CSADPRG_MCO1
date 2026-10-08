@@ -1,17 +1,16 @@
+//  ********************
+//  Last names: Aya-ay, Bicomong
+//  Language: java
+//  Paradigm(s): Functional, Imperative, Array-oriented, Object-oriented
+//  ********************
 import java.util.Scanner;
 
-/**
- * Banking and Currency Exchange Application (introductory console exercise).
- * Six module interfaces displayed sequentially over standard console I/O.
- *
- * Requirements covered: REQ-0001 through REQ-0020.
- */
 public class MCO1_BasicIO_2_java {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        // ============ MAIN MENU ============
+        // main
         System.out.println("Select Transaction:");
         System.out.println("[1] Register Account Name");
         System.out.println("[2] Deposit Amount");
@@ -28,7 +27,7 @@ public class MCO1_BasicIO_2_java {
         
         System.out.println("\nChoice = " + choice + "\n");
         
-        // ============ REGISTER ACCOUNT NAME ============
+        // register
         System.out.println("Register Account Name");
         System.out.print("Account Name: ");
         String accountName = scanner.nextLine();
@@ -37,7 +36,7 @@ public class MCO1_BasicIO_2_java {
         
         System.out.println("\nAccount Name = " + accountName + "\n");
         
-        // ============ DEPOSIT AMOUNT ============
+        // deposit
         System.out.println("Deposit Amount");
 
         System.out.print("Account Name: ");
@@ -46,14 +45,14 @@ public class MCO1_BasicIO_2_java {
         System.out.println("Currency: PHP");
         System.out.println();
         System.out.print("Deposit Amount: ");
-        String depositAmount = scanner.nextLine();
+        double depositAmount = scanner.nextDouble();
         System.out.println();
         System.out.print("***");
         
         System.out.println("\nAccount Name = " + depAccountName);
-        System.out.printf("Deposit Amount = .%2f\n\n", depositAmount);
+        System.out.printf("Deposit Amount = %.2f\n\n", depositAmount);
         
-        // ============ WITHDRAW AMOUNT ============
+        // withdraw
         System.out.println("Withdraw Amount");
         System.out.print("Account Name: ");
         String withAccountName = scanner.nextLine();
@@ -61,14 +60,14 @@ public class MCO1_BasicIO_2_java {
         System.out.println("Currency: PHP");
         System.out.println();
         System.out.print("Withdraw Amount: ");
-        String withdrawAmount = scanner.nextLine();
+        double withdrawAmount = scanner.nextDouble();
         System.out.println();
         System.out.print("***");
         
         System.out.println("\nAccount Name = " + withAccountName);
-        System.out.printf("Withdraw Amount = .%2f\n\n", withdrawAmount);
+        System.out.printf("Withdraw Amount = %.2f\n\n", withdrawAmount);
         
-        // ============ RECORD EXCHANGE RATE ============
+        // record
         System.out.println("Record Exchange Rate");
         System.out.println();
         System.out.println("Currencies:");
@@ -91,7 +90,7 @@ public class MCO1_BasicIO_2_java {
         System.out.println("\nSelect Foreign Currency = " + foreignCurrency);
         System.out.println("Exchange Rate = " + exchangeRate + "\n");
         
-        // ============ CURRENCY EXCHANGE ============
+        // currency
         System.out.println("Foreign Currency Exchange");
         System.out.print("Source Amount (PHP): ");
         double sourceAmount = Double.parseDouble(scanner.nextLine());
