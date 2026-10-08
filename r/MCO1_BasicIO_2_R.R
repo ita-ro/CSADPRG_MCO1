@@ -4,8 +4,6 @@
 # Paradigm(s): Functional, Imperative, Array-oriented, Object-oriented
 # ********************
 
-# Run with:  gcc mco1_milestone1.c -o output.exe
-
 con <- file("stdin")
 open(con)
 
