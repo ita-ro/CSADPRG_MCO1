@@ -45,12 +45,12 @@ public class MCO1_BasicIO_2_java {
         System.out.println("Currency: PHP");
         System.out.println();
         System.out.print("Deposit Amount: ");
-        String depositAmount = scanner.nextLine();
+        double depositAmount = scanner.nextDouble();
         System.out.println();
         System.out.print("***");
         
         System.out.println("\nAccount Name = " + depAccountName);
-        System.out.println("Deposit Amount = " + depositAmount + "\n");
+        System.out.printf("Deposit Amount = %.2f\n\n", depositAmount);
         
         // withdraw
         System.out.println("Withdraw Amount");
@@ -60,12 +60,12 @@ public class MCO1_BasicIO_2_java {
         System.out.println("Currency: PHP");
         System.out.println();
         System.out.print("Withdraw Amount: ");
-        String withdrawAmount = scanner.nextLine();
+        double withdrawAmount = scanner.nextDouble();
         System.out.println();
         System.out.print("***");
         
         System.out.println("\nAccount Name = " + withAccountName);
-        System.out.println("Withdraw Amount = " + withdrawAmount + "\n");
+        System.out.printf("Withdraw Amount = %.2f\n\n", withdrawAmount);
         
         // record
         System.out.println("Record Exchange Rate");
