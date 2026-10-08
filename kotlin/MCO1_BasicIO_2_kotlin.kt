@@ -20,21 +20,14 @@ fun main() {
 
 
     print("Choice: ")
-    val choice = scanner.nextLine()
-    println()
-    print("***")
-
-
-    println("\nChoice = $choice\n")
+    val choice = scanner.nextLine().trimStart('\uFEFF').trim().toIntOrNull() ?: 0
+    System.out.printf("\n***\nChoice = %d\n\n", choice)
 
     // register
     println("Register Account Name")
     print("Account Name: ")
     val accountName = scanner.nextLine()
-    println()
-    print("***")
-
-    println("\nAccount Name = $accountName\n")
+    System.out.printf("\n***\nAccount Name = %s\n\n", accountName)
 
     // deposit
     println("Deposit Amount")
@@ -44,12 +37,8 @@ fun main() {
     println("Currency: PHP")
     println()
     print("Deposit Amount: ")
-    val depositAmount = scanner.nextLine()
-    println()
-    print("***")
-
-    println("\nAccount Name = $depAccountName")
-    println("Deposit Amount = %.2f\n", depositAmount)
+    val depositAmount = scanner.nextLine().toDoubleOrNull() ?: 0.0
+    System.out.printf("\n***\nAccount Name = %s\nDeposit Amount = %.2f\n\n", depAccountName, depositAmount)
 
     // withdraw
     println("Withdraw Amount")
@@ -59,12 +48,8 @@ fun main() {
     println("Currency: PHP")
     println()
     print("Withdraw Amount: ")
-    val withdrawAmount = scanner.nextLine()
-    println()
-    print("***")
-
-    println("\nAccount Name = $withAccountName")
-    println("Withdraw Amount = %.2f\n",withdrawAmount)
+    val withdrawAmount = scanner.nextLine().toDoubleOrNull() ?: 0.0
+    System.out.printf("\n***\nAccount Name = %s\nWithdraw Amount = %.2f\n\n", withAccountName, withdrawAmount)
 
     // record
     println("Record Exchange Rate")
@@ -79,14 +64,10 @@ fun main() {
     println()
 
     print("Select Foreign Currency: ")
-    val foreignCurrency = scanner.nextLine()
+    val foreignCurrency = scanner.nextLine().trim().toIntOrNull() ?: 0
     print("Exchange Rate: ")
-    val exchangeRate = scanner.nextLine()
-    println()
-    print("***")
-
-    println("\nSelect Foreign Currency = $foreignCurrency")
-    println("Exchange Rate = $exchangeRate\n")
+    val exchangeRate = scanner.nextLine().trim().toDoubleOrNull() ?: 0.0
+    System.out.printf("\n***\nSelect Foreign Currency = [%d]\nExchange Rate = %.2f\n\n", foreignCurrency, exchangeRate)
 
     // currency
     println("Foreign Currency Exchange")
@@ -102,9 +83,5 @@ fun main() {
     System.out.printf("[4] British Pound Sterling (GBP) = %.2f\n", (sourceAmount * 84.00))
     System.out.printf("[5] Euro (EUR) = %.2f\n", (sourceAmount * 72.00))
     System.out.printf("[6] Chinese Yuan Renminni (CNY) = %.2f\n", (sourceAmount * 9.00))
-    println()
-    print("***")
-
-    println("\nSource Currency = Philippine Peso (PHP)")
-    System.out.printf("Source Amount (PHP) = %.2f\n", sourceAmount)
+    System.out.printf("\n***\nSource Currency = Philippine Peso (PHP)\nSource Amount (PHP) = %.2f\n", sourceAmount)
 }
