@@ -108,5 +108,6 @@ public class MCO1_BasicIO_2_java {
 
         System.out.println("\nSource Currency = Philippine Peso (PHP)");
         System.out.printf("Source Amount (PHP) = %.2f\n", sourceAmount);
+        scanner.close();
     }
 }
