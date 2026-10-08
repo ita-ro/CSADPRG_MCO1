@@ -82,6 +82,7 @@ cat(sprintf("\n***\nAccount Name = %s\nWithdraw Amount = %.2f\n\n", account_name
 
 # Rec
 cat("Record Exchange Rate\n\n")
+cat("Currencies:\n")
 for (i in seq_along(currencies)) {
   cat(sprintf("[%d] %s\n", i, currencies[i]))
 }
