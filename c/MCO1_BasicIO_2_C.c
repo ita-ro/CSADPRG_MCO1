@@ -103,6 +103,7 @@ int main(void) {
 
     // Rec
     printf("Record Exchange Rate\n\n");
+    printf("Currencies:\n");
     for (i = 0; i < 6; i++)
         printf("[%d] %s\n", i + 1, currencies[i]);
     printf("\nSelect Foreign Currency: ");
