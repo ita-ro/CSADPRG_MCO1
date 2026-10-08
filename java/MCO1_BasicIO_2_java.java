@@ -51,7 +51,7 @@ public class MCO1_BasicIO_2_java {
         System.out.print("***");
         
         System.out.println("\nAccount Name = " + depAccountName);
-        System.out.println("Deposit Amount = " + depositAmount + "\n");
+        System.out.printf("Deposit Amount = .%2f\n\n", depositAmount);
         
         // ============ WITHDRAW AMOUNT ============
         System.out.println("Withdraw Amount");
@@ -66,7 +66,7 @@ public class MCO1_BasicIO_2_java {
         System.out.print("***");
         
         System.out.println("\nAccount Name = " + withAccountName);
-        System.out.println("Withdraw Amount = " + withdrawAmount + "\n");
+        System.out.printf("Withdraw Amount = .%2f\n\n", withdrawAmount);
         
         // ============ RECORD EXCHANGE RATE ============
         System.out.println("Record Exchange Rate");
