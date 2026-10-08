@@ -4,6 +4,8 @@
 # Paradigm(s): Functional, Imperative, Array-oriented, Object-oriented
 # ********************
 
+# Run with:  Rscript MCO1_BasicIO_2_R.R
+
 con <- file("stdin")
 open(con)
 
@@ -27,7 +29,7 @@ parse_number <- function(line) {
 
 read_int <- function() {
   value <- parse_number(read_line())
-  if (value == floor(value)) as.integer(value) else 0L   # whole numbers only
+  if (value == floor(value)) as.integer(value) else 0L
 }
 
 read_double <- function() parse_number(read_line())
