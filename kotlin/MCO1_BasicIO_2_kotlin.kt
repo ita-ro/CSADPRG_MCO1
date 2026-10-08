@@ -49,7 +49,7 @@ fun main() {
     print("***")
 
     println("\nAccount Name = $depAccountName")
-    println("Deposit Amount = .2f\n", depositAmount)
+    println("Deposit Amount = %.2f\n", depositAmount)
 
     // withdraw
     println("Withdraw Amount")
@@ -64,7 +64,7 @@ fun main() {
     print("***")
 
     println("\nAccount Name = $withAccountName")
-    println("Withdraw Amount = .2f\n",withdrawAmount)
+    println("Withdraw Amount = %.2f\n",withdrawAmount)
 
     // record
     println("Record Exchange Rate")
