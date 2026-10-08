@@ -1,11 +1,10 @@
+//  ********************
+//  Last names: Aya-ay, Bicomong
+//  Language: kotlin
+//  Paradigm(s): Functional, Imperative, Array-oriented, Object-oriented
+//  ********************
 import java.util.Scanner
 
-/**
- * Banking and Currency Exchange Application (introductory console exercise).
- * Six module interfaces displayed sequentially over standard console I/O.
- *
- * Requirements covered: REQ-0001 through REQ-0020.
- */
 fun main() {
     val scanner = Scanner(System.`in`)
 
@@ -106,7 +105,6 @@ fun main() {
     println()
     print("***")
 
-    // REQ-0020: Display PHP as default source currency and source amount
     println("\nSource Currency = Philippine Peso (PHP)")
     System.out.printf("Source Amount (PHP) = %.2f\n", sourceAmount)
 }
