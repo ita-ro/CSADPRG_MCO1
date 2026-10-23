@@ -83,7 +83,7 @@ public class MP_2_java {
             System.out.println();
     }
 
-    static boolean requireAccount() {
+    static boolean hasAccount() {
 
         if (accountName == null) {
             System.out.println("No account registered yet. Please use [1] Register Account Name first.");
@@ -110,7 +110,7 @@ public class MP_2_java {
     static void deposit() {
         System.out.println("\nDeposit Amount");
 
-        if (!requireAccount()) {
+        if (!hasAccount()) {
             return;
         }
 
@@ -127,7 +127,7 @@ public class MP_2_java {
     static void withdraw() {
         System.out.println("\nWithdraw Amount");
 
-        if (!requireAccount()){
+        if (!hasAccount()){
             return;
         }
 
@@ -178,7 +178,7 @@ public class MP_2_java {
     static void showInterest() {
         System.out.println("\nShow Interest Amount");
 
-        if (!requireAccount()) {
+        if (!hasAccount()) {
             return;
         }
 

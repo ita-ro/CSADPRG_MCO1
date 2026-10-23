@@ -65,7 +65,7 @@ fun printCurrencies() {
     println()
 }
 
-fun requireAccount(): Boolean {
+fun hasAccount(): Boolean {
 
     if (accountName == null) {
         println("No account registered yet. Please use [1] Register Account Name first.")
@@ -88,7 +88,7 @@ fun registerAccount() {
 fun deposit() {
     println("\nDeposit Amount")
 
-    if (!requireAccount()) {
+    if (!hasAccount()) {
         return
     }
 
@@ -104,7 +104,7 @@ fun deposit() {
 fun withdraw() {
     println("\nWithdraw Amount")
 
-    if (!requireAccount()) {
+    if (!hasAccount()) {
         return
     }
 
@@ -155,7 +155,7 @@ fun currencyExchange() {
 fun showInterest() {
     println("\nShow Interest Amount")
 
-    if (!requireAccount()) {
+    if (!hasAccount()) {
         return
     }
 

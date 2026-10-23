@@ -29,7 +29,7 @@ static double rates[NUM_CURRENCIES] = {1.00, 62.00, 0.40, 84.00, 72.00, 9.00};
 static const double ANNUAL_INTEREST = 0.05;
 
 static char accountName[LINE_LEN];
-static int hasAccount = 0;
+static int accountFlag = 0;
 static double balance = 0.00;
 
 static void readInput(const char *prompt, char *out) {
@@ -123,8 +123,8 @@ static void printCurrencies(void) {
     printf("\n");
 }
 
-static int requireAccount(void) {
-    if (!hasAccount) {
+static int hasAccount(void) {
+    if (!accountFlag) {
         printf("No account registered yet. Please use [1] Register Account Name first.\n");
         return 0;
     }
@@ -142,13 +142,13 @@ static void registerAccount(void) {
         readInput("Account Name: ", name);
     } while (name[0] == '\0');
     strcpy(accountName, name);
-    hasAccount = 1;
+    accountFlag = 1;
 }
 
 static void deposit(void) {
     double amount;
     printf("\nDeposit Amount\n");
-    if (!requireAccount())
+    if (!hasAccount())
         return;
     printf("Account Name: %s\n", accountName);
     printf("Current Balance: %.2f\n", balance);
@@ -163,7 +163,7 @@ static void deposit(void) {
 static void withdraw(void) {
     double amount;
     printf("\nWithdraw Amount\n");
-    if (!requireAccount())
+    if (!hasAccount())
         return;
     printf("Account Name: %s\n", accountName);
     printf("Current Balance: %.2f\n", balance);
@@ -217,7 +217,7 @@ static void showInterest(void) {
     double running;
     printf("\nShow Interest Amount\n");
 
-    if (!requireAccount())
+    if (!hasAccount())
         return;
 
     printf("Account Name: %s\n", accountName);

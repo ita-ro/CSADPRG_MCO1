@@ -74,7 +74,7 @@ print_currencies <- function() {
   cat("\n")
 }
 
-require_account <- function() {
+hasAccount <- function() {
   if (is.null(account_name)) {
     cat("No account registered yet. Please use [1] Register Account Name first.\n")
     return(FALSE)
@@ -95,7 +95,7 @@ register_account <- function() {
 
 deposit <- function() {
   cat("\nDeposit Amount\n")
-  if (!require_account()) return(invisible(NULL))
+  if (!hasAccount()) return(invisible(NULL))
   cat(sprintf("Account Name: %s\n", account_name))
   cat(sprintf("Current Balance: %.2f\n", balance))
   cat("Currency: PHP\n")
@@ -108,7 +108,7 @@ deposit <- function() {
 
 withdraw <- function() {
   cat("\nWithdraw Amount\n")
-  if (!require_account()) return(invisible(NULL))
+  if (!hasAccount()) return(invisible(NULL))
   cat(sprintf("Account Name: %s\n", account_name))
   cat(sprintf("Current Balance: %.2f\n", balance))
   cat("Currency: PHP\n")
@@ -157,7 +157,7 @@ currency_exchange <- function() {
 
 show_interest <- function() {
   cat("\nShow Interest Amount\n")
-  if (!require_account()) return(invisible(NULL))
+  if (!hasAccount()) return(invisible(NULL))
 
   cat(sprintf("Account Name: %s\n", account_name))
   cat(sprintf("Current Balance: %.2f\n", balance))
