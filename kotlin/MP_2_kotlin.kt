@@ -3,6 +3,10 @@
 //  Language: kotlin
 //  Paradigm(s): Functional, Imperative, Object-oriented
 //  ********************
+
+// Build: kotlinc MP_2_kotlin.kt -include-runtime -d MP_2_kotlin.jar 
+// Run: java -jar MP_2_kotlin.jar
+
 import java.util.Scanner
 
 val scanner = Scanner(System.`in`)
@@ -25,9 +29,11 @@ fun readInput(prompt: String): String {
 fun readChoice(prompt: String): Int {
     while (true) {
         val v = readInput(prompt).toIntOrNull()
+
         if (v != null && v in 1..6) {
             return v
         }
+
         println("Invalid input. Enter a number from 1 to 6.")
     }
 }
@@ -35,9 +41,11 @@ fun readChoice(prompt: String): Int {
 fun isPositive(prompt: String): Double {
     while (true) {
         val v = readInput(prompt).toDoubleOrNull()
+
         if (v != null && v > 0) {
             return v
         }
+
         println("Invalid input. Enter an amount greater than 0.")
     }
 }
@@ -58,10 +66,12 @@ fun printCurrencies() {
 }
 
 fun requireAccount(): Boolean {
+
     if (accountName == null) {
         println("No account registered yet. Please use [1] Register Account Name first.")
         return false
     }
+
     return true
 }
 
@@ -157,9 +167,11 @@ fun showInterest() {
 
     while (true) {
         days = isPositive("Total Number of Days: ").toInt()
+
         if (days >= 1 && days <= 36500) {
             break
         }
+
         println("Invalid input. Enter a number from 1 to 36500.")
     }
 

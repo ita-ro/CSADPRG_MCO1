@@ -3,6 +3,10 @@
 //  Language: java
 //  Paradigm(s): Functional, Imperative, Object-oriented
 //  ********************
+
+// Build: javac MP_2_java.java
+// Run: java MP_2_java
+
 import java.util.Scanner;
 
 public class MP_2_java {
@@ -26,24 +30,32 @@ public class MP_2_java {
 
     static int readChoice(String prompt) {
         while (true) {
+            
             try {
                 int v = Integer.parseInt(readInput(prompt));
+
                 if (v >= 1 && v <= 6) {
                     return v;
                 }
+
             } catch (NumberFormatException ignored) { }
+
             System.out.println("Invalid input. Enter a number from 1 to 6.");
         }
     }
 
     static double isPositive(String prompt) {
         while (true) {
+
             try {
                 double v = Double.parseDouble(readInput(prompt));
+
                 if (v > 0) {
                     return v;
                 }
+
             } catch (NumberFormatException ignored) { }
+
             System.out.println("Invalid input. Enter an amount greater than 0.");
         }
     }
@@ -51,12 +63,15 @@ public class MP_2_java {
     static boolean isYorN(String prompt) {
         while (true) {
             String s = readInput(prompt);
+
             if (s.equalsIgnoreCase("Y")) {
                 return true;
             }
+
             if (s.equalsIgnoreCase("N")) {
                 return false;
             }
+
             System.out.println("Please enter Y or N.");
         }
     }
@@ -69,10 +84,12 @@ public class MP_2_java {
     }
 
     static boolean requireAccount() {
+
         if (accountName == null) {
             System.out.println("No account registered yet. Please use [1] Register Account Name first.");
             return false;
         }
+
         return true;
     }
 
@@ -92,9 +109,11 @@ public class MP_2_java {
 
     static void deposit() {
         System.out.println("\nDeposit Amount");
+
         if (!requireAccount()) {
             return;
         }
+
         System.out.println("Account Name: " + accountName);
         System.out.printf("Current Balance: %.2f\n", balance);
         System.out.println("Currency: PHP");
@@ -107,9 +126,11 @@ public class MP_2_java {
 
     static void withdraw() {
         System.out.println("\nWithdraw Amount");
+
         if (!requireAccount()){
             return;
         }
+
         System.out.println("Account Name: " + accountName);
         System.out.printf("Current Balance: %.2f\n", balance);
         System.out.println("Currency: PHP");
@@ -169,15 +190,17 @@ public class MP_2_java {
 
         while (true) {
             days = (int) isPositive("Total Number of Days: ");
+
             if (days >= 1 && days <= 36500) {
                 break;
             }
+
             System.out.println("Invalid input. Enter a number from 1 to 36500.");
         }
 
         System.out.println("Day | Interest | Balance |");
         double running = balance;
-        
+
         for (int d = 1; d <= days; d++) {
             double interest = round(running * (ANNUAL_INTEREST / 365));
             running = round(running + interest);
@@ -195,6 +218,7 @@ public class MP_2_java {
             System.out.println("[5] Record Exchange Rates");
             System.out.println("[6] Show Interest Amount");
             System.out.println();
+
             switch (readChoice("Choice: ")) {
                 case 1 -> registerAccount();
                 case 2 -> deposit();
@@ -203,6 +227,7 @@ public class MP_2_java {
                 case 5 -> recordExchangeRate();
                 case 6 -> showInterest();
             }
+
         } while (isYorN("Back to the Main Menu (Y/N): "));
     }
 }
