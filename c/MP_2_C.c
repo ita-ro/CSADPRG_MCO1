@@ -6,7 +6,7 @@ Paradigm(s): Procedural, Imperative, Structured
 ********************
 */
 
-// Build: gcc MCO1_BasicIO_2_C.c -o MCO1_BasicIO_2_C.exe -lm
+// Build: gcc MP_2_C.c -o MP_2_C.exe -lm
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -134,8 +134,6 @@ static int requireAccount(void) {
 static double round2(double v) {
     return floor(v * 100.0 + 0.5) / 100.0;
 }
-
-/* ---------- transactions ---------- */
 
 static void registerAccount(void) {
     char name[LINE_LEN];
