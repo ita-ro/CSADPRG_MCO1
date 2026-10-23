@@ -4,7 +4,7 @@
 # Paradigm(s): Functional, Imperative, Array-oriented, Object-oriented
 # ********************
 
-# Run with:  Rscript MCO1_BasicIO_2_R.R
+# Run with:  Rscript MP_2_R.R
 
 con <- file("stdin")
 open(con)
